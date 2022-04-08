@@ -11,11 +11,12 @@ let a;
 output.textContent='';
 
 for (let i=0;i<numbers.length;i++) {
-    ;
-    numbers[i].addEventListener('click', function(){
-
+        numbers[i].addEventListener('click', function(){
+        if (result) {result=0; output.textContent='';}
+        if (par1===0){output.textContent=''}
         output.textContent+=numbers[i].value;
         par1= output.textContent 
+        
     console.log(par1,par2)  }) 
     
 
@@ -24,20 +25,22 @@ for (let i=0;i<numbers.length;i++) {
 for (let i = 0; i < calculateButtons.length; i++) {
     calculateButtons[i].addEventListener('click', function(){
 
-par2=par1;
-par1=0;
-console.log(par1,par2);
-output.textContent=''
-a=calculateButtons[i].value;
-
-    console.log(a)
-    })
+            par2=par1;
+            par1=0;
+            console.log(par1,par2);
+            a=calculateButtons[i].value;
+            
+                })
 
 }
 console.log(a);
 
+
 res.addEventListener('click', function(){
-    if (a==='+') {result=Number(par1) +Number(par2)};
+    if (a==='+') {result=Number(par1) + Number(par2)};
+    if (a==='-') {result=Number(par2) - Number(par1)};
+    if (a==='*') {result=Number(par2) * Number(par1)};
+    if (a==='/') {result=Number(par2) / Number(par1)};
     output.textContent=result;
     
 })
