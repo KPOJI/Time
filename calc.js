@@ -3,9 +3,9 @@ let output = document.querySelector('.output');
 let numbers = document.querySelectorAll('.but');
 let res = document.querySelector('.calculateButton1');
 let clear = document.querySelector('.buttonC')
-let par1 = 0;
-let par2 = 0;
-let result = 0;
+let par1 = '';
+let par2 = '';
+let result = '';
 let calculateButtons = document.querySelectorAll('.calculateButton');
 let a;
 
@@ -15,7 +15,7 @@ for (let i=0;i<numbers.length;i++) {
         numbers[i].addEventListener('click', function(){
         if (result) {result=0; output.textContent='';}
         if (par1===0){output.textContent=''}
-        output.textContent+=numbers[i].value;
+        if(!(output.textContent==='0')){output.textContent+=numbers[i].value;}
         par1= output.textContent 
         
     console.log(par1,par2)  }) 
@@ -43,13 +43,16 @@ res.addEventListener('click', function(){
     if (a==='*'){result=Number(par2) * Number(par1)};
     if (a==='/') {result=Number(par2) / Number(par1)};
     if (!a) {result=par1}
-    output.textContent=result;})
+    if(output.textContent==='') {result=''}
+   
+    else{output.textContent=result;}
+    par1=result})
 
 clear.addEventListener('click', function(){
-    result=0;
-    a=0;
-    par1=0;
-    par2=0;
+    result='';
+    a='';
+    par1='';
+    par2='';
     output.textContent='';
     
 })
