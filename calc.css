@@ -1,7 +1,7 @@
-body{background-color: aqua;}
+body{background-color: rgb(69, 64, 143);}
 .calcContainer{width:500px;height:300px;
      border:1px solid black;
-     background-color: brown;
+     background-color: hsl(342, 37%, 43%);
      margin:auto;
      border-radius: 20px;}
 
@@ -22,7 +22,7 @@ body{background-color: aqua;}
  }
  .blockButtons{float: left;
      width:50%;
-    //border:1px solid yellow; 
+    
     margin-left:38px;}
 .buttons{
     width:90%;
@@ -33,7 +33,12 @@ margin:auto}
 display:block;
 margin-bottom:10px;}
 .calculate input:last-child{
-    width:200px;
+    width:100px;
     height:40px;
-    margin:auto;
+    margin-left:auto;
+    margin-right: 50px;
+    float: right;
 }
+.nullButton input{width:100px;
+height:40px;
+margin-left:25px;}
