@@ -12,24 +12,30 @@ let a;
 output.textContent='';
 
 for (let i=0;i<numbers.length;i++) {
+    
+    
         numbers[i].addEventListener('click', function(){
+            console.log(output.textContent.length)
+            if (par1.length<9) {
         if (result) {result=0; output.textContent='';}
-        if (par1===0){output.textContent=''}
+        if (par1===''){output.textContent=''}
         if(!(output.textContent==='0')){output.textContent+=numbers[i].value;}
-        par1= output.textContent 
+        par1= output.textContent ;
+    }
         
     console.log(par1,par2)  }) 
     
-
+        
 }
 
 for (let i = 0; i < calculateButtons.length; i++) {
     calculateButtons[i].addEventListener('click', function(){
 
             par2=par1;
-            par1=0;
+            par1='';
             console.log(par1,par2);
             a=calculateButtons[i].value;
+            
             
                 })
 
