@@ -23,9 +23,11 @@ for (let i = 0; i < numbers.length; i++) {
 			if (result) { result = 0; out = ''; }
 			if (par1 === '') { out = '' }
 			if ((out === '')&&numValue==='.') {out='0.'}
+			if ((out === '0')&&!(numValue==='.')) {out=''}
 			if (out.includes('.')&&(numValue==='.')) {numValue=''}
 			if (!(out === '0')) { out += numValue; }
 			if ((out === '0')&&(numValue==='.')){ out += numValue; }
+			
 			
 			par1 = out;
 			
