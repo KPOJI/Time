@@ -55,8 +55,10 @@ res.addEventListener('click', function () {
 	if (a === '/') { result = Number(par2) / Number(par1) };
 	if (!a) { result = par1 }
 	if (output.textContent === '') { result = '' }
-	else { output.textContent = +result.toFixed(6); }
-	par1 = +result.toFixed(6);
+	else { output.textContent = +result.toFixed(8); }
+	if (output.textContent>999999999) {output.textContent=result.toExponential(4);}
+			
+	par2 = +result.toFixed(8);
 	console.log('result = ' + result, 'a = ' + par1, 'b = ' + par2);
 })
 clear.addEventListener('click', function () {
