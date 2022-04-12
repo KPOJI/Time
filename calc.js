@@ -8,24 +8,33 @@ let par2 = '';
 let result = '';
 let calculateButtons = document.querySelectorAll('.calculateButton');
 let a;
-
+let out;
 output.textContent = '';
 
 for (let i = 0; i < numbers.length; i++) {
 
-
 	numbers[i].addEventListener('click', function () {
+		numValue=numbers[i].value;
+		out = output.textContent;
+		console.log('out   ===   '+ out);
 		console.log('dlina= ' + par1.toString().length, 'a = ' + par1)
 		if (par1.toString().length < 9) {
-			if (result) { result = 0; output.textContent = ''; }
-			if (par1 === '') { output.textContent = '' }
-			if (!(output.textContent === '0')) { output.textContent += numbers[i].value; }
-			par1 = output.textContent;
+			
+			if (result) { result = 0; out = ''; }
+			if (par1 === '') { out = '' }
+			if ((out === '')&&numValue==='.') {out='0.'}
+			if (out.includes('.')&&(numValue==='.')) {numValue=''}
+			if (!(out === '0')) { out += numValue; }
+			if ((out === '0')&&(numValue==='.')){ out += numValue; }
+			
+			par1 = out;
+			
 		}
 		console.log('a = ' + par1, 'b = ' + par2, 'result = ' + result)
+		output.textContent=out;
 	})
+	
 }
-
 for (let i = 0; i < calculateButtons.length; i++) {
 	calculateButtons[i].addEventListener('click', function () {
 		if (par1 !== '') {
@@ -37,7 +46,6 @@ for (let i = 0; i < calculateButtons.length; i++) {
 	})
 }
 console.log(a);
-
 res.addEventListener('click', function () {
 	if (a === '+') { result = Number(par1) + Number(par2) };
 	if (a === '-') { result = Number(par2) - Number(par1) };
@@ -49,7 +57,6 @@ res.addEventListener('click', function () {
 	par1 = result;
 	console.log('result = ' + result, 'a = ' + par1, 'b = ' + par2);
 })
-
 clear.addEventListener('click', function () {
 	result = '';
 	a = '';
