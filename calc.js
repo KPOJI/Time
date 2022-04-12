@@ -14,32 +14,36 @@ output.textContent = '';
 for (let i = 0; i < numbers.length; i++) {
 
 	numbers[i].addEventListener('click', function () {
-		numValue=numbers[i].value;
+		numValue = numbers[i].value;
 		out = output.textContent;
-		console.log('out   ===   '+ out);
+		console.log('out   ===   ' + out);
 		console.log('dlina= ' + par1.toString().length, 'a = ' + par1)
 		if (par1.toString().length < 9) {
-			
+
 			if (result) { result = 0; out = ''; }
-			if (par1 === '') { out = '' }
-			if ((out === '')&&numValue==='.') {out='0.'}
-			if ((out === '0')&&!(numValue==='.')) {out=''}
-			if (out.includes('.')&&(numValue==='.')) {numValue=''}
-			if (!(out === '0')) { out += numValue; }
-			if ((out === '0')&&(numValue==='.')){ out += numValue; }
+			if ((par1 === '') && !(out === '-')) { out = '' }
+
+			if ((out === '') && numValue === '.') { out = '0.' }
+			if ((out === '0') && !(numValue === '.')) { out = '' }
+			if (out.includes('.') && (numValue === '.')) { numValue = '' }
 			
-			
+			 if (!(out === '0')||(out === '-')) { out += numValue; }
+			if ((out === '0') && (numValue === '.')) { out += numValue; }
+
+
+
 			par1 = out;
-			
+
 		}
 		console.log('a = ' + par1, 'b = ' + par2, 'result = ' + result)
-		output.textContent=out;
+		output.textContent = out;
 	})
-	
+
 }
 for (let i = 0; i < calculateButtons.length; i++) {
 	calculateButtons[i].addEventListener('click', function () {
-		if (par1 !== '') {
+		if (output.textContent === '') { output.textContent = '-'; }
+		else if (par1 !== '') {
 			par2 = par1;
 			par1 = '';
 			console.log('a = ' + par1, 'b = ' + par2);
@@ -53,11 +57,12 @@ res.addEventListener('click', function () {
 	if (a === '-') { result = Number(par2) - Number(par1) };
 	if (a === '*') { result = Number(par2) * Number(par1) };
 	if (a === '/') { result = Number(par2) / Number(par1) };
-	if (!a) { result = par1 }
+	if (!a) { result = par2 }
 	if (output.textContent === '') { result = '' }
 	else { output.textContent = +result.toFixed(8); }
-	if (output.textContent>999999999) {output.textContent=result.toExponential(4);}
-			
+	if ((output.textContent > 999999999)||(output.textContent < (-999999999)))
+	 { output.textContent = result.toExponential(4); }
+
 	par2 = +result.toFixed(8);
 	console.log('result = ' + result, 'a = ' + par1, 'b = ' + par2);
 })
