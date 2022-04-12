@@ -1,66 +1,70 @@
-body{background-color: rgb(37, 11, 72);}
-.calcContainer{width:240px;height:330px;
-     border:3px solid rgb(70, 32, 32);
-     background-color: hsl(342, 95%, 29%);
-     margin-right:auto;
-     margin-left: auto;
-     border-radius: 15px;
-     box-shadow: 0px 0px 3px 3px ;
-     
-     }
+body {	background-color: rgb(37, 11, 72);}
+.calcContainer {
+	width: 240px;
+	height: 330px;
+	border: 3px solid rgb(70, 32, 32);
+	background-color: hsl(342, 95%, 29%);
+	margin-right: auto;
+	margin-left: auto;
+	border-radius: 15px;
+	box-shadow: 0px 0px 3px 3px;}
+.form {
+	width: 300px;
+	margin-top: 10px;
+	margin-left: -30px;}
+.output {
+	display: block;
+	width: 70%;
+	height: 70px;
+	background-color: azure;
+	margin: auto;
+	margin-bottom: 5px;
+	border-radius: 10%;
+	text-align: end;
+	font-size: 40px;
+	border: 2px solid rgb(64, 18, 18);
+	box-shadow: 0 0 2px 2px rgb(79, 19, 19) inset;
+	overflow: hidden;}
+.buttons input {
+	width: 40px;
+	height: 59px;
+	border-radius: 30%;
+	margin-bottom: 3px;
+	box-shadow: 0 0 1px 1px;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px rgb(84, 25, 25);}
+.blockButtons {
+	float: left;
+	width: 50%;
+	margin-left: 38px;}
+.buttons {
+	width: 100%;
+	text-align: center;
+	margin: auto}
+.calculate input {
+	width: 60px;
+	height: 30px;
+	display: block;
+	margin-bottom: 8px;
+	border-radius: 30%;
+	box-shadow: 0 0 1px 1px;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px rgb(84, 25, 25);}
+.calculate input:last-child {
+	width: 80px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: 50px;
+	float: right;}
+.nullButton input {
+	width: 50px;
+	height: 40px;
+	margin-left: 40px;
+	border-radius: 30%;}
+.buttons input.comma{
+	width: 50px;
+	height: 40px;
+	margin-right: 10px;
+	float: right;
 
-.form{width:300px;
-    margin-top:10px;
-      margin-left:-30px;
-      }     
-
-.output{
-    display:block;
-    width:70%;
-    height: 70px;
-    background-color: azure;
-    margin: auto;
-    margin-bottom: 5px;
-    border-radius: 10%;
-    text-align:end;
-    font-size:40px;
-    border:2px solid rgb(64, 18, 18);
-    box-shadow: 0 0 2px 2px rgb(79, 19, 19) inset;
-    overflow: hidden;
-    }
-.buttons input{
-    width:40px;
-    height:59px;
-    border-radius: 30%;
-    margin-bottom:3px;
-    box-shadow: 0 0 1px 1px;
-    font-weight:bold;
-    text-shadow:0px 0px 1px rgb(84, 25, 25);
- }
- .blockButtons{float: left;
-     width:50%;
-    
-    margin-left:38px;}
-.buttons{
-    width:90%;
-    text-align:center;
-    margin:auto}
-.calculate input{width:60px;
-    height: 30px;
-    display:block;
-    margin-bottom:8px;
-    border-radius: 30%;
-    box-shadow: 0 0 1px 1px;
-    font-weight:bold;
-    text-shadow:0px 0px 1px rgb(84, 25, 25);}
-.calculate input:last-child{
-    width:100px;
-    height:40px;
-    margin-left:auto;
-    margin-right: 50px;
-    float: right;
 }
-.nullButton input{width:100px;
-    height:40px;
-    margin-left:25px;
-    border-radius: 30%;}
