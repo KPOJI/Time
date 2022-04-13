@@ -11,6 +11,7 @@ let a;
 let out;
 let historyWindow = document.querySelector('.outputBar');
 let hwText=historyWindow.textContent;
+historyWindow.textContent=''
 hwText=''
 output.textContent = '';
 
