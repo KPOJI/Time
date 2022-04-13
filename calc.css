@@ -206,27 +206,33 @@ box-shadow: 0px 0px 6px 3px;
 	border-radius: 6%;
 	
 	text-align: end;
-	font-size: 11px;
+	font-size: 16px;
 	border: 2px solid rgb(64, 18, 18);
 	box-shadow: 0 0 2px 2px rgb(79, 19, 19) inset;
-	overflow-y: scroll;
+	overflow:auto;
+	overflow-wrap: normal;
 outline: none;
 resize: none;}
 	.outputBar::-webkit-scrollbar {
-    background-color: rgba(30, 8, 43,0.9);
+    background-color: rgba(0, 255, 76, 0.3);
 		border-radius: 7px;
 		width: 10px;
+		height: 10px;
 }
 .outputBar::-webkit-scrollbar-thumb {
-	background-color: black;
+	background-color: rgba(80, 5, 66,0.5);
 	border-radius: 7px;
 	width: 10px;
+	height: 10px;
 }
+.outputBar::-webkit-scrollbar-thumb:hover{background-color:rgba(150, 4, 123, 0.5)}
 
 
 .outputBar::-webkit-scrollbar-track {
 	
-	background-color: black;
+	background-color: rgba(0, 0, 0, 0.8);
 	border-radius: 7px;
 	width: 10px;
+	height: 10px;
 }
+.outputBar::-webkit-scrollbar-corner{display: none;}
