@@ -44,10 +44,14 @@ for (let i = 0; i < numbers.length; i++) {
 
 
 			par1 = out;
-
+			historyWindow.textContent+=numValue;
 		}
 		console.log('out = '+out,'a = ' + par1, 'b = ' + par2, 'result = ' + result, 'ZNAK', a)
 		output.textContent = out;
+
+
+
+		
 	})
 
 }
@@ -62,7 +66,7 @@ for (let i = 0; i < calculateButtons.length; i++) {
 			console.log('a = ' + par1, 'b = ' + par2);
 			
 		}
-		
+		historyWindow.textContent+=a;	
 	})
 }
 console.log(a);
@@ -93,12 +97,15 @@ res.addEventListener('click', function () {
 	//par2 = +result.toFixed(8);
 	par2=''
 	console.log('out = '+out,'result = ' + result, 'a = ' + par1, 'b = ' + par2 , 'ZNAK'+a);
-	if ((result > 999999999)||(result < (-999999999))){hwText+=result.toExponential(6)}
+	
+	
+	if ((result > 999999999)||(result < (-999999999))){hwText+=result.toExponential(4)}
 	else {hwText+=+result.toFixed(8);}
-	historyWindow.textContent+=hwText;
+	
+	historyWindow.textContent+='='+hwText;
 	historyWindow.textContent+=`\n`;
 
-	console.log(historyWindow.textContent);
+
 })
 
 

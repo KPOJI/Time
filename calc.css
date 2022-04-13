@@ -187,7 +187,7 @@ box-shadow: 0px 0px 6px 3px;
 	position: relative;
 	margin-top: 10px;
 	margin-right: 0px;
-	min-width: 170px;
+	min-width: 220px;
 	height: 50%; 
 	
 	
@@ -204,8 +204,9 @@ box-shadow: 0px 0px 6px 3px;
 	margin-bottom: 5px;
 	margin-top: 0;
 	border-radius: 6%;
+	
 	text-align: end;
-	font-size: 20px;
+	font-size: 11px;
 	border: 2px solid rgb(64, 18, 18);
 	box-shadow: 0 0 2px 2px rgb(79, 19, 19) inset;
 	overflow-y: scroll;
@@ -214,10 +215,12 @@ resize: none;}
 	.outputBar::-webkit-scrollbar {
     background-color: rgba(30, 8, 43,0.9);
 		border-radius: 7px;
+		width: 10px;
 }
 .outputBar::-webkit-scrollbar-thumb {
 	background-color: black;
 	border-radius: 7px;
+	width: 10px;
 }
 
 
@@ -225,4 +228,5 @@ resize: none;}
 	
 	background-color: black;
 	border-radius: 7px;
+	width: 10px;
 }
