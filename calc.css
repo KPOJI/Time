@@ -1,13 +1,15 @@
 @keyframes opa {
 	from{opacity: 1;}
-	50%{opacity: 0.3;}
+	50%{opacity: 0.2;}
 	
 	
 }
 
-
+h1{color: black;
+ }
 
 body {	
+	min-width: 100%;
 	padding:0;
 	margin: 0;
 	height:100vh;
@@ -16,10 +18,10 @@ body {
 }
 
 .calc {position: relative;
+	
 	margin-top:auto;
+	width: 100%;
 	height:100vh;
-	margin-right: auto;
-	margin-left: auto;
 
 	border: 1px solid yellow;
 	opacity: 1;
@@ -44,7 +46,7 @@ body {
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		background: url('light.jpg') no-repeat 49.3% -30%;
+		background: url('light.jpg') no-repeat 49.3% 30%;
 		background-size: 250%;
 		border-radius: 8%;
 		box-shadow: 0px 0px 3px 3px inset,
@@ -54,31 +56,12 @@ body {
 		animation: opa 7s infinite	;
 	}
 
-	.calcContainer {
-		
-	margin-top: auto;
-	width: 240px;
-	height: 330px;
-	border: 3px solid rgb(70, 32, 32);
-	background-color: hsl(342, 95%, 29%, 0.05);
-	margin-right: auto;
-	margin-left: auto;
-	border-radius: 15px;
-	box-shadow: 0px 0px 3px 3px;
-	transform: scale(1);
-	z-index: 2;
-	opacity: 1;}
+
 	
-	
-.form {
-	z-index: 2;
-	position: absolute;
-	width: 300px;
-	margin-top: 10px;
-	margin-left: -30px;}
+
 .output {
 	display: block;
-	width: 70%;
+	width: 90%;
 	height: 70px;
 	background-color: azure;
 	margin: auto;
@@ -90,26 +73,40 @@ body {
 	box-shadow: 0 0 2px 2px rgb(79, 19, 19) inset;
 	overflow: hidden;}
 .buttons input {
-	width: 40px;
+	width: 30%;
 	height: 59px;
 	border-radius: 30%;
 	margin-bottom: 3px;
 	box-shadow: 0 0 1px 1px;
 	font-weight: bold;
 	text-shadow: 0px 0px 1px rgb(84, 25, 25);}
-.blockButtons {
-	float: left;
-	width: 50%;
-	margin-left: 38px;}
+
 .buttons {
+	display: inline-block;
 	width: 100%;
 	text-align: center;
-	margin: auto}
+	margin: auto;
+	margin-left:10px;
+}
+
+
+
+.blo{display: flex;
+	justify-content: space-between;
+
+}
+.blockButtons {
+	
+	width: 60%;
+	}
+.calculate{
+	width:30%
+}
 .calculate input {
 	width: 60px;
 	height: 30px;
 	display: block;
-	margin-bottom: 8px;
+	margin-bottom: 7.3px;
 	border-radius: 30%;
 	box-shadow: 0 0 1px 1px;
 	font-weight: bold;
@@ -117,18 +114,108 @@ body {
 .calculate input:last-child {
 	width: 80px;
 	height: 40px;
-	margin-left: auto;
-	margin-right: 50px;
-	float: right;}
+	
+	margin-left: -20px;
+	
+	}
 .nullButton input {
-	width: 50px;
+	width: 55px;
 	height: 40px;
-	margin-left: 40px;
+	position: absolute;
+	bottom:10px;
+	left:13px;
 	border-radius: 30%;}
 .buttons input.comma{
-	width: 50px;
+	width: 55px;
 	height: 40px;
-	margin-right: 10px;
-	float: right;
+	position: absolute;
+	bottom:10px;
+	left:74px;
+	
 
+}
+
+.sideBar {
+}
+
+
+
+.calcContainer {
+	display:flex;
+	justify-content: space-around; 
+margin-top: auto;
+width: 450px;
+height: 330px;
+border: 3px solid rgb(70, 32, 32);
+background-color: hsl(342, 95%, 29%, 0.05);
+margin-right: auto;
+margin-left: auto;
+
+border-radius: 15px;
+
+transform: scale(.8);
+z-index: 2;
+opacity: 1;
+border: 1px solid violet;
+border-style: ridge;
+box-shadow: 0px 0px 6px 3px;
+
+
+}
+
+
+.form {
+
+	
+	position: relative;
+	width: 55%;
+	margin-top: 10px;
+	
+	
+	
+	
+	
+	
+}
+.formBar {
+	position: relative;
+	margin-top: 10px;
+	margin-right: 0px;
+	min-width: 170px;
+	height: 50%; 
+	
+	
+	
+	}
+
+
+.outputBar {
+	display: block;
+	width: 90%;
+	height: 100%;
+	background-color: azure;
+	margin: auto;
+	margin-bottom: 5px;
+	border-radius: 6%;
+	text-align: end;
+	font-size: 20px;
+	border: 2px solid rgb(64, 18, 18);
+	box-shadow: 0 0 2px 2px rgb(79, 19, 19) inset;
+	overflow-y: scroll;
+outline: none;
+resize: none;}
+	.outputBar::-webkit-scrollbar {
+    background-color: rgba(30, 8, 43,0.9);
+		border-radius: 7px;
+}
+.outputBar::-webkit-scrollbar-thumb {
+	background-color: black;
+	border-radius: 7px;
+}
+	;
+}
+.outputBar::-webkit-scrollbar-track {
+	
+	background-color: black;
+	border-radius: 7px;
 }

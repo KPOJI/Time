@@ -9,7 +9,11 @@ let result = '';
 let calculateButtons = document.querySelectorAll('.calculateButton');
 let a;
 let out;
+let historyWindow = document.querySelector('.outputBar');
+let hwText=historyWindow.textContent;
+hwText=''
 output.textContent = '';
+
 
 for (let i = 0; i < numbers.length; i++) {
 
@@ -64,6 +68,7 @@ console.log(a);
 
 
 res.addEventListener('click', function () {
+	hwText='';
 	console.log(a);
 	console.log(result);
 	if (a === '+'&&(result||result===0)) { result += Number(par1)}
@@ -87,7 +92,12 @@ res.addEventListener('click', function () {
 	//par2 = +result.toFixed(8);
 	par2=''
 	console.log('out = '+out,'result = ' + result, 'a = ' + par1, 'b = ' + par2 , 'ZNAK'+a);
-	
+	if ((result > 999999999)||(result < (-999999999))){hwText+=result.toExponential(6)}
+	else {hwText+=+result.toFixed(8);}
+	historyWindow.textContent+=hwText;
+	historyWindow.textContent+=`\n`;
+
+	console.log(historyWindow.textContent);
 })
 
 
@@ -97,4 +107,5 @@ clear.addEventListener('click', function () {
 	par1 = '';
 	par2 = '';
 	output.textContent = '';
+	historyWindow.textContent='';
 })
